@@ -10,10 +10,23 @@ $stroke-color:#cccccc;
           border-radius: $radius;
 }
 
+@mixin background($imgpath,$size:cover,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        size: $size;
+        repeat: $repeat;
+    }
+}
+
 body{
   font: 100% $font-stack;
   color: $primary-color;
 }
+
+header {
+    @include background('../img/background-header.jpg');
+}
+
 h4{
   font-size: 17px;
 }
