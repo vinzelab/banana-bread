@@ -8,18 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var ContactComponent = (function () {
     function ContactComponent() {
     }
-    ContactComponent = __decorate([
-        core_1.Component({
-            selector: 'app-contact',
-            templateUrl: 'app/landing/contact/contact.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ContactComponent);
+    ContactComponent.prototype.ngOnInit = function () {
+        var mapProp = {
+            center: new google.maps.LatLng(51.508742, -0.120850),
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
+    };
     return ContactComponent;
 }());
+ContactComponent = __decorate([
+    core_1.Component({
+        selector: 'app-contact',
+        templateUrl: 'app/landing/contact/contact.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], ContactComponent);
 exports.ContactComponent = ContactComponent;
 //# sourceMappingURL=contact.component.js.map

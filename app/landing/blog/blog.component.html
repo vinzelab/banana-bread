@@ -1,4 +1,17 @@
 <div class="container">
   <h2>Blog posts</h2>
   <h4>My latest ideas</h4>
+
+  <div *ngFor="let article of articles">
+  <figure>
+    <img src="{{article.url}}" alt="{{article.name}}">
+    <figcaption>
+      <h4>{{article.name}}</h4>
+      <p>{{article.date}}in{{article.category}}</p>
+      <p>{{article.description}}</p>
+    </figcaption>
+  </figure>
+  </div>
+
+
 </div>

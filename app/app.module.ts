@@ -14,7 +14,7 @@ import { InstagramComponent } from './landing/instagram/instagram.component';
 
 // import { HeaderComponent }   from './app/landing-page/header.component';
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule,FormsModule ],
   declarations: [ AppComponent, HeaderComponent,AboutComponent,WorksComponent,TestimonialsComponent,BlogComponent,ContactComponent,InstagramComponent],
   bootstrap:    [ AppComponent ]
 })

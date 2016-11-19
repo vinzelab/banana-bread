@@ -9,15 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var blog_service_1 = require('./blog.service');
 var BlogComponent = (function () {
-    function BlogComponent() {
+    // Inject FriendService and assign it to _friendService
+    function BlogComponent(_blogService) {
+        // Utilize .get request from app/friend.service.ts to populate friends object
+        this.articles = _blogService.getArticles();
     }
     BlogComponent = __decorate([
         core_1.Component({
             selector: 'app-blog',
+            providers: [blog_service_1.BlogService],
             templateUrl: 'app/landing/blog/blog.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [blog_service_1.BlogService])
     ], BlogComponent);
     return BlogComponent;
 }());
