@@ -1,15 +1,14 @@
 <div class="container" id="blog">
   <div class="title-wrapper text-center">
-
-  <h2>Blog posts</h2>
-  <h4>My latest ideas</h4>
-</div>
+    <h2>Blog posts</h2>
+    <h4>My latest ideas</h4>
+  </div>
   <div *ngFor="let article of articles" class="col-xs-12 col-md-4">
   <figure>
     <img src="{{article.url}}" alt="{{article.name}}">
-    <figcaption>
-      <h4>{{article.name}}</h4>
-      <p>{{article.date}}in{{article.category}}</p>
+    <figcaption class="text-center">
+      <h4>{{article.title}}</h4>
+      <h6>{{article.date}}in {{article.category}}</h6>
       <p>{{article.description}}</p>
     </figcaption>
   </figure>

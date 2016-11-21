@@ -53,8 +53,9 @@ export class ContactComponent implements OnInit{
   // To add the marker to the map, call setMap();
   marker.setMap(map);
   var infowindow = new google.maps.InfoWindow({
-    content: "banana bread"
+    content: "<div style='background-color:black;color:white'>banana bread</div>"
   });
     infowindow.open(map, marker);
+
   }
 }
