@@ -9,15 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var testimonials_service_1 = require('./testimonials.service');
 var TestimonialsComponent = (function () {
-    function TestimonialsComponent() {
+    // Inject FriendService and assign it to _friendService
+    function TestimonialsComponent(_testimonialsService) {
+        // Utilize .get request from app/friend.service.ts to populate friends object
+        this.testimonials = _testimonialsService.getTestimonials();
     }
     TestimonialsComponent = __decorate([
         core_1.Component({
             selector: 'app-testim',
+            providers: [testimonials_service_1.TestimonialsService],
             templateUrl: 'app/landing/testimonials/testimonials.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [testimonials_service_1.TestimonialsService])
     ], TestimonialsComponent);
     return TestimonialsComponent;
 }());

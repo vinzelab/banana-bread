@@ -10,29 +10,90 @@ $stroke-color:#cccccc;
           border-radius: $radius;
 }
 
-@mixin background($imgpath,$size:cover,$repeat: no-repeat) {
+@mixin background($imgpath,$size:cover,$position:0 -180,$repeat: no-repeat) {
     background: {
-        image: url($imgpath);
+        image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%),url($imgpath);
+        position: $position;
         size: $size;
         repeat: $repeat;
     }
 }
 
+@mixin button($bg) {
+  background: $bg;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  @include border-radius(0px);
+  border:2px solid white;
+  width: 15%;
+  padding: 15px;
+  margin-top: 40px;
+  &:hover {
+    background:white;
+    color: $primary-color;
+    border: none;
+    transition: all 0.3s ease;
+  }
+}
+
+@mixin title-layout($fontsize){
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: $fontsize;
+}
 body{
   font: 100% $font-stack;
   color: $primary-color;
 }
 
 header {
-    @include background('../img/background-header.jpg');
+  @include background('../img/background-header.jpg');
+  height: 100vh;
+  color: white;
+  h2{
+    @include title-layout(4em);
+  }
+  h3{
+    @include title-layout(1.2em);
+  }
 }
-
+.main-nav{
+  a{
+    color: white;
+    font-size: 16px;
+  }
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.menu-item{
+  width: (100%/7);
+  text-align: center;
+}
+.logo-header{
+  margin-top:-20px;
+}
+h1{
+  @include title-layout(8em);
+}
+h2{
+  font-size: 5em;
+}
 h4{
   font-size: 17px;
 }
 p{
-  font-size: 12px;
+  font-size: 17px;
   color: $secondary-color;
+}
+.btn-default{
+  @include button(rgba(255, 255, 255, 0));
+  text-align: center;
 }
 .footer-wrapper{
   border-bottom: 1px solid $stroke-color;
@@ -73,4 +134,55 @@ footer h4{
   text-align: center;
   color: $secondary-color;
   padding: 20px;
+}
+figure {
+    margin: 40px auto;
+}
+figcaption{
+  h5{
+    @include title-layout(1em);
+    color: $secondary-color;
+  }
+}
+#gmap{
+  height: 600px;
+}
+.cta-header{
+  margin-top: (100vh/4);
+}
+.activity{
+  display: flex;
+  margin: 20px;
+  border-bottom: 1px solid $secondary-color;
+  cursor: pointer;
+  &:hover,&:active{
+    border-bottom: 1px solid white;
+  }
+  h3{
+    text-transform: lowercase;
+    margin-top: 34px;
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+.activity-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.title-wrapper{
+  &:before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    background-color: #cccccc;
+    width: 5%;
+    top: 90%;
+    left: 48%;
+  }
+  h4{
+    @include title-layout(1em);
+    color: $secondary-color;
+  }
+  padding: 40px;
+  position: relative;
 }

@@ -1,4 +1,11 @@
-<div class="container">
-  <h2>testimonials</h2>
-  <h4>Our happy customers saying </h4>
+<div class="container text-center">
+  <div class="title-wrapper">
+    <h2>testimonials</h2>
+    <h4>Our happy customers saying </h4>
+  </div>
+</div>
+<div *ngFor="let testimonial of testimonials" class="col-xs-12 col-md-6">
+    <p>{{testimonial.comment}}</p>
+    <img src="{{testimonial.url}}" alt="banana bread photographer">
+    <h4>{{testimonial.name}}</h4>
 </div>

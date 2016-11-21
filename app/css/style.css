@@ -3,16 +3,76 @@ body {
   color: #222222; }
 
 header {
-  background-image: url("../img/background-header.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%), url("../img/background-header.jpg");
+  background-position: 0 -180;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white; }
+  header h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 4em; }
+  header h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2em; }
+
+.main-nav {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto; }
+  .main-nav a {
+    color: white;
+    font-size: 16px; }
+
+.menu-item {
+  width: 14.28571%;
+  text-align: center; }
+
+.logo-header {
+  margin-top: -20px; }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8em; }
+
+h2 {
+  font-size: 5em; }
 
 h4 {
   font-size: 17px; }
 
 p {
-  font-size: 12px;
+  font-size: 17px;
   color: #999999; }
+
+.btn-default {
+  background: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid white;
+  width: 15%;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center; }
+  .btn-default:hover {
+    background: white;
+    color: #222222;
+    border: none;
+    transition: all 0.3s ease; }
 
 .footer-wrapper {
   border-bottom: 1px solid #cccccc;
@@ -53,3 +113,54 @@ footer h4 {
   text-align: center;
   color: #999999;
   padding: 20px; }
+
+figure {
+  margin: 40px auto; }
+
+figcaption h5 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1em;
+  color: #999999; }
+
+#gmap {
+  height: 600px; }
+
+.cta-header {
+  margin-top: 25vh; }
+
+.activity {
+  display: flex;
+  margin: 20px;
+  border-bottom: 1px solid #999999;
+  cursor: pointer; }
+  .activity:hover, .activity:active {
+    border-bottom: 1px solid white; }
+  .activity h3 {
+    text-transform: lowercase;
+    margin-top: 34px;
+    text-align: left;
+    margin-left: 10px; }
+
+.activity-wrapper {
+  display: flex;
+  justify-content: center; }
+
+.title-wrapper {
+  padding: 40px;
+  position: relative; }
+  .title-wrapper:before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background-color: #cccccc;
+    width: 5%;
+    top: 90%;
+    left: 48%; }
+  .title-wrapper h4 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1em;
+    color: #999999; }
