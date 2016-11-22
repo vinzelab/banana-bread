@@ -13,8 +13,9 @@ var ContactComponent = (function () {
     function ContactComponent() {
     }
     ContactComponent.prototype.ngOnInit = function () {
+        var maposition = new google.maps.LatLng(41.385385, 2.180871);
         var mapProp = {
-            center: new google.maps.LatLng(41.385385, 2.180871),
+            center: maposition,
             zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -46,16 +47,17 @@ var ContactComponent = (function () {
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(41.385385, 2.180871),
+            position: maposition,
             title: "BANANA BREAD"
         });
         // To add the marker to the map, call setMap();
         marker.setMap(map);
         var infowindow = new google.maps.InfoWindow({
-            content: "<div style='background-color:black;color:white'>banana bread</div>"
+            content: "<div id='info-window'>banana bread</div>"
         });
         infowindow.open(map, marker);
     };
+    ContactComponent.prototype.onSubmit = function () { console.log("test"); };
     return ContactComponent;
 }());
 ContactComponent = __decorate([

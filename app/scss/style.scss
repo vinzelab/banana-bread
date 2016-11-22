@@ -3,6 +3,8 @@ $primary-color: #222222;
 $secondary-color:#999999;
 $stroke-color:#cccccc;
 $bg-color:#f5f5f5;
+$span-color:#666666;
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -10,9 +12,9 @@ $bg-color:#f5f5f5;
           border-radius: $radius;
 }
 
-@mixin background($imgpath,$size:cover,$position:0 -180,$repeat: no-repeat) {
+@mixin background($imgpath,$size:cover,$position:0 -290,$repeat: no-repeat) {
     background: {
-        image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%),url($imgpath);
+        image: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%),url($imgpath);
         position: $position;
         size: $size;
         repeat: $repeat;
@@ -26,20 +28,21 @@ $bg-color:#f5f5f5;
   color: white;
   @include border-radius(0px);
   border:2px solid white;
-  width: 15%;
   padding: 15px;
   margin-top: 40px;
+  width: 25%;
   &:hover {
     background:white;
     color: $primary-color;
     transition: all 0.3s ease;
+    border: 1px solid white;
   }
 }
 
 @mixin title-layout($fontsize){
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 10px;
   font-size: $fontsize;
 }
 
@@ -63,12 +66,18 @@ header {
   }
   h3{
     @include title-layout(1.2em);
+    letter-spacing: 3px;
   }
 }
 .main-nav{
   a{
     color: white;
     font-size: 16px;
+    font-weight: lighter;
+    &:hover{
+      text-decoration: none;
+      color: $secondary-color;
+    }
   }
   padding-top: 50px;
   display: flex;
@@ -83,10 +92,13 @@ header {
 }
 
 h1{
-  @include title-layout(8em);
+  @include title-layout(10em);
+  font-weight: bold;
+  letter-spacing: 25px;
 }
 h2{
   font-size: 5em;
+  font-weight: bold;
 }
 h4{
   font-size: 17px;
@@ -98,17 +110,18 @@ h6{
     height: 2px;
     background-color: #cccccc;
     width: 5%;
-    top: 200%;
+    top: 117%;
     left: 48%;
   }
   color: $secondary-color;
   text-transform: uppercase;
   position: relative;
+  padding: 10px;
 }
 p{
-  font-size: 17px;
+  font-size: 1.5em;
   color: $secondary-color;
-  padding: 3% 0 5% 0;
+  padding: 0% 0 6% 0;
   line-height: 28px;
   width: 80%;
   margin: 0 auto;
@@ -124,10 +137,24 @@ p{
       text-transform: uppercase;
       text-align: center;
     }
+    h6{
+      padding: 0;
+      margin: 0;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+    .popular-post{
+      margin: 10px;
+    }
 }
-footer h4{
+footer {
+  h4{
   text-align: center;
   position: relative;
+  margin-bottom: 50px;
   &:after {
     position: absolute;
     content: "";
@@ -147,12 +174,12 @@ footer h4{
     top: 58%;
   }
 }
-.img-about{
-  display: block;
-  margin: 0 auto;
-  @include border-radius(200px);
 }
+
 .bottom-footer{
+  p{
+    padding: 0;
+  }
   text-align: center;
   color: $secondary-color;
   padding: 20px;
@@ -161,17 +188,21 @@ figure {
   img{
     max-width: 100%;
   }
-    margin: 40px auto;
+  p{
+    width: 100%;
+  }
+    margin: 20px auto;
 }
 figcaption{
   h5{
     @include title-layout(1em);
     color: $secondary-color;
+    letter-spacing: 3px;
   }
   padding-top:5%;
 }
 #gmap{
-  height: 600px;
+  height: 900px;
 }
 .cta-header{
   margin-top: (100vh/4);
@@ -181,15 +212,17 @@ figcaption{
   margin: 20px;
   border-bottom: 1px solid $secondary-color;
   cursor: pointer;
-  &:hover,&:active{
+  &:hover,&:focus{
     border-bottom: 1px solid white;
   }
   h3{
     text-transform: lowercase;
     margin-top: 34px;
     text-align: left;
-    margin-left: 10px;
   }
+}
+.active{
+  border-bottom: 1px solid white;
 }
 .activity-wrapper {
     display: flex;
@@ -204,9 +237,9 @@ figcaption{
     content: "";
     height: 3px;
     background-color: #cccccc;
-    width: 3%;
+    width: 1%;
     top: 90%;
-    left: 48%;
+    left: 49.5%;
   }
   h4{
     color: $secondary-color;
@@ -216,16 +249,99 @@ figcaption{
     padding-top: 1%;
     letter-spacing: 0px;
   }
-  padding: 6%;
-  position: relative;
+    padding: 6% 0% 4% 0%;
+    position: relative;
 }
   .form-control{
   @include input($stroke-color);}
 
 #testimonials{
   background-color: $bg-color;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
 .btn-primary{
   @include button($secondary-color);
 }
 .gm-style-iw + div {display: none;}
+
+.about-img{
+  background:url('../img/about-img2.jpg') no-repeat left 50%,
+url('../img/about-img1.jpg') no-repeat right;
+height: 700px;
+}
+
+span{
+  color: $span-color;
+}
+#photo-wrapper{
+  @include background('../img/bg-section-3.jpg');
+  height: 700px;
+  background-position: 0 0;
+  margin-top: 50px;
+}
+#contact{
+  .title-wrapper{
+    margin-top: 50px;
+    &:before{
+      left: 0;
+    }
+  }
+
+  p{width: 100%;}
+  }
+#insta-wrapper{
+  display: flex;
+  overflow-y: hidden;
+  margin-top: 40px;
+}
+footer{
+  margin-top: 50px;
+}
+#info-window{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: $font-stack;
+  color: black;
+  background: white;
+  padding: 20px;
+}
+.testimonials-wrapper{
+  position: relative;
+}
+.testimonial{
+  p{
+    padding: 0% 0% 3% 0%;
+  }
+  &:before{
+    content: '“';
+    position: absolute;
+    font-size: 7em;
+    color: $span-color;
+  }
+  &:after{
+    content: '”';
+    position: absolute;
+    font-size: 7em;
+    color: $span-color;
+  }
+}
+.nav-bullet{
+  li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: $secondary-color;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  }
+  .active{
+    width: 10px;
+    height: 10px;
+  }
+  margin: 20px auto;
+}

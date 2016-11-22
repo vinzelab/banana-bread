@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 declare var google: any;
 
@@ -9,8 +10,9 @@ declare var google: any;
 
 export class ContactComponent implements OnInit{
   ngOnInit() {
+    var maposition=new google.maps.LatLng(41.385385, 2.180871);
     var mapProp = {
-            center: new google.maps.LatLng(41.385385, 2.180871),
+            center: maposition,
             zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -46,16 +48,16 @@ export class ContactComponent implements OnInit{
           map.setMapTypeId('map_style');
 
           var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(41.385385, 2.180871),
-      title:"BANANA BREAD"
+        position: maposition,
+        title:"BANANA BREAD"
   });
 
   // To add the marker to the map, call setMap();
   marker.setMap(map);
   var infowindow = new google.maps.InfoWindow({
-    content: "<div style='background-color:black;color:white'>banana bread</div>"
-  });
-    infowindow.open(map, marker);
+    content: "<div id='info-window'>banana bread</div>"  });
+  infowindow.open(map, marker);
 
   }
+onSubmit() { console.log("test") }
 }
