@@ -14,6 +14,12 @@ export class ContactComponent implements OnInit{
     var mapProp = {
             center: maposition,
             zoom: 20,
+            scrollwheel: false,
+            zoomControl: false,
+            scaleControl: false,
+            navigationControl: false,
+            mapTypeControl: false,
+            streetViewControl: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
       var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
@@ -21,8 +27,8 @@ export class ContactComponent implements OnInit{
       var styles = [
           {
             stylers: [
-              { hue: "#00ffe6" },
-              { saturation: -20 }
+              { hue: "#00000" },
+              { saturation: -100 }
             ]
           },{
             featureType: "road",

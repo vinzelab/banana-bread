@@ -11,16 +11,24 @@ header {
   height: 100vh;
   color: white;
   position: relative; }
+  header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 25px; }
   header h2 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 4em; }
+    font-size: 3rem;
+    font-weight: 100; }
   header h3 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     letter-spacing: 3px; }
 
 .main-nav {
@@ -33,87 +41,38 @@ header {
   .main-nav a {
     color: white;
     font-size: 16px;
-    font-weight: lighter; }
+    font-weight: 100; }
     .main-nav a:hover {
       text-decoration: none;
-      color: #999999; }
+      color: black; }
 
 .menu-item {
   width: 14.28571%;
   text-align: center; }
 
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  font-size: 10em;
-  font-weight: bold;
-  letter-spacing: 25px; }
-
 h2 {
-  font-size: 5em;
-  font-weight: bold; }
+  font-size: 5rem;
+  font-weight: 700; }
 
 h4 {
-  font-size: 17px; }
+  font-size: 17px;
+  text-align: center; }
 
 h6 {
   color: #999999;
   text-transform: uppercase;
-  position: relative;
-  padding: 10px; }
-  h6:before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    background-color: #cccccc;
-    width: 5%;
-    top: 117%;
-    left: 48%; }
+  position: relative; }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #999999;
   padding: 0% 0 6% 0;
   line-height: 28px;
   width: 80%;
   margin: 0 auto; }
 
-.btn-default {
-  background: rgba(255, 255, 255, 0);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: white;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  border-radius: 0px;
-  border: 2px solid white;
-  padding: 15px;
-  margin-top: 40px;
-  width: 25%;
-  text-align: center; }
-  .btn-default:hover {
-    background: white;
-    color: #222222;
-    transition: all 0.3s ease;
-    border: 1px solid white; }
-
-.footer-wrapper {
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 80px; }
-  .footer-wrapper h5 {
-    text-transform: uppercase;
-    text-align: center; }
-  .footer-wrapper h6 {
-    padding: 0;
-    margin: 0; }
-  .footer-wrapper p {
-    margin: 0;
-    padding: 0;
-    color: black; }
-  .footer-wrapper .popular-post {
-    margin: 10px; }
+section {
+  padding-bottom: 40px; }
 
 footer h4 {
   text-align: center;
@@ -136,6 +95,41 @@ footer h4 {
     margin-left: -25%;
     top: 58%; }
 
+.footer-wrapper {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 50px; }
+  .footer-wrapper h5 {
+    text-transform: uppercase;
+    text-align: center; }
+  .footer-wrapper h6 {
+    margin: 0; }
+  .footer-wrapper p {
+    margin: 0;
+    padding: 0;
+    color: black; }
+  .footer-wrapper .popular-post {
+    margin: 10px; }
+
+.btn-default {
+  background: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px solid white;
+  padding: 10px;
+  margin-top: 40px;
+  width: 20%;
+  text-align: center; }
+  .btn-default:hover {
+    background: white;
+    color: #222222;
+    transition: all 0.3s ease;
+    border: 1px solid white; }
+
 .bottom-footer {
   text-align: center;
   color: #999999;
@@ -152,25 +146,25 @@ figure {
 
 figcaption {
   padding-top: 5%; }
+  figcaption h4 {
+    text-align: center; }
   figcaption h5 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 1em;
+    font-size: 1rem;
     color: #999999;
     letter-spacing: 3px; }
 
-#gmap {
-  height: 900px; }
-
 .cta-header {
-  margin-top: 25vh; }
+  margin-top: 20vh; }
 
 .activity {
   display: flex;
   margin: 20px;
   border-bottom: 1px solid #999999;
-  cursor: pointer; }
+  cursor: pointer;
+  align-items: flex-end; }
   .activity:hover, .activity:focus {
     border-bottom: 1px solid white; }
   .activity h3 {
@@ -178,15 +172,12 @@ figcaption {
     margin-top: 34px;
     text-align: left; }
 
-.active {
-  border-bottom: 1px solid white; }
-
 .activity-wrapper {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 5%;
-  left: 30%; }
+  width: 100%;
+  bottom: 2%; }
 
 .title-wrapper {
   padding: 6% 0% 4% 0%;
@@ -196,14 +187,14 @@ figcaption {
     content: "";
     height: 3px;
     background-color: #cccccc;
-    width: 1%;
+    width: 20px;
     top: 90%;
-    left: 49.5%; }
+    left: 49%; }
   .title-wrapper h4 {
     color: #999999;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding-top: 1%;
     letter-spacing: 0px; }
 
@@ -217,7 +208,7 @@ figcaption {
 
 #testimonials {
   background-color: #f5f5f5;
-  margin-top: 50px;
+  padding-top: 50px;
   padding-bottom: 50px; }
 
 .btn-primary {
@@ -230,9 +221,10 @@ figcaption {
   -ms-border-radius: 0px;
   border-radius: 0px;
   border: 2px solid white;
-  padding: 15px;
+  padding: 10px;
   margin-top: 40px;
-  width: 25%; }
+  width: 20%;
+  text-align: center; }
   .btn-primary:hover {
     background: white;
     color: #222222;
@@ -241,10 +233,6 @@ figcaption {
 
 .gm-style-iw + div {
   display: none; }
-
-.about-img {
-  background: url("../img/about-img2.jpg") no-repeat left 50%, url("../img/about-img1.jpg") no-repeat right;
-  height: 700px; }
 
 span {
   color: #666666; }
@@ -256,15 +244,21 @@ span {
   background-repeat: no-repeat;
   height: 700px;
   background-position: 0 0;
-  margin-top: 50px; }
+  padding-top: 50px; }
 
 #contact .title-wrapper {
-  margin-top: 50px; }
+  padding-top: 50px; }
   #contact .title-wrapper:before {
     left: 0; }
 
 #contact p {
   width: 100%; }
+
+#gmap {
+  height: 100vh; }
+
+#instagram {
+  padding-top: 50px; }
 
 #insta-wrapper {
   display: flex;
@@ -272,7 +266,7 @@ span {
   margin-top: 40px; }
 
 footer {
-  margin-top: 50px; }
+  padding-top: 50px; }
 
 #info-window {
   text-transform: uppercase;
@@ -289,16 +283,10 @@ footer {
 .testimonial p {
   padding: 0% 0% 3% 0%; }
 
-.testimonial:before {
+.testimonial:before, .testimonial:after {
   content: '“';
   position: absolute;
-  font-size: 7em;
-  color: #666666; }
-
-.testimonial:after {
-  content: '”';
-  position: absolute;
-  font-size: 7em;
+  font-size: 7rem;
   color: #666666; }
 
 .nav-bullet {
@@ -316,3 +304,15 @@ footer {
   .nav-bullet .active {
     width: 10px;
     height: 10px; }
+
+.blog-title {
+  position: relative;
+  margin-bottom: 40px; }
+  .blog-title:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #cccccc;
+    width: 5%;
+    top: 160%;
+    left: 48%; }
