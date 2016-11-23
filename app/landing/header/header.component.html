@@ -1,8 +1,20 @@
 <header>
-
+  <div class="hamburger-menu" (click)="showMenu = !showMenu;">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="responsive-nav" [style.opacity]="getStyle()">
+    <div class="menu-item-responsive"><a href="#"><img class="logo-header" src="app/img/logo-banana_bread.png" alt="logo banana bread" /></a></div>
+    <div class="menu-item-responsive"><a href="#work">Work</a></div>
+    <div class="menu-item-responsive"><a href="#collection">Collection</a></div>
+    <div class="menu-item-responsive"><a href="#exposition">Exposition</a></div>
+    <div class="menu-item-responsive"><a href="#about">About me</a></div>
+    <div class="menu-item-responsive"><a href="#blog">Blog</a></div>
+    <div class="menu-item-responsive"><a href="#contact">Contact me</a></div>
+  </nav>
   <div class="container">
     <nav class="main-nav">
-
       <div class="menu-item"><a href="#work">Work</a></div>
       <div class="menu-item"><a href="#collection">Collection</a></div>
       <div class="menu-item"><a href="#exposition">Exposition</a></div>
@@ -10,35 +22,34 @@
       <div class="menu-item"><a href="#about">About me</a></div>
       <div class="menu-item"><a href="#blog">Blog</a></div>
       <div class="menu-item"><a href="#contact">Contact me</a></div>
-
     </nav>
+
 
     <div class="cta-header">
       <h1>Banana Bread</h1>
       <h2>Photographer</h2>
       <h3>San Francisco - Paris - Barcelona</h3>
-        <a href="#contact" class="btn btn-default center-block">Contact me</a>
+      <a href="#contact" class="btn btn-default center-block">Contact me</a>
     </div>
   </div>
 
-    <div class="activity-wrapper">
-      <div class="activity">
-        <h2>01</h2>
-        <h3>Barcelona<br> je t'aime</h3>
-      </div>
-      <div class="activity">
-        <h2>02</h2>
-        <h3>This is<br> Montreal</h3>
-      </div>
-      <div class="activity">
-        <h2>03</h2>
-        <h3>Urban<br> Plx Marseille</h3>
-      </div>
-      <div class="activity">
-        <h2>04</h2>
-        <h3>Shutter<br> cloting</h3>
-      </div>
+  <div class="activity-wrapper">
+    <div class="activity">
+      <h2>01</h2>
+      <h3>Barcelona<br> je t'aime</h3>
     </div>
-
+    <div class="activity">
+      <h2>02</h2>
+      <h3>This is<br> Montreal</h3>
+    </div>
+    <div class="activity">
+      <h2>03</h2>
+      <h3>Urban<br> Plx Marseille</h3>
+    </div>
+    <div class="activity">
+      <h2>04</h2>
+      <h3>Shutter<br> cloting</h3>
+    </div>
+  </div>
 
 </header>

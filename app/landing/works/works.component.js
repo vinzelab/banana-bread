@@ -11,9 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var works_service_1 = require('./works.service');
 var WorksComponent = (function () {
-    // Inject FriendService and assign it to _friendService
     function WorksComponent(_worksService) {
-        // Utilize .get request from app/friend.service.ts to populate friends object
         this.works = _worksService.getWorks();
     }
     WorksComponent = __decorate([

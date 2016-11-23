@@ -11,9 +11,7 @@ import { WorksService } from './works.service';
 export class WorksComponent {
   public works;
 
-    // Inject FriendService and assign it to _friendService
-    constructor(_worksService: WorksService) {
-        // Utilize .get request from app/friend.service.ts to populate friends object
-        this.works = _worksService.getWorks();
-    }
+  constructor(_worksService: WorksService) {
+    this.works = _worksService.getWorks();
+  }
 }

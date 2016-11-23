@@ -11,11 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var testimonials_service_1 = require('./testimonials.service');
 var TestimonialsComponent = (function () {
-    // Inject FriendService and assign it to _friendService
     function TestimonialsComponent(_testimonialsService) {
-        // Utilize .get request from app/friend.service.ts to populate friends object
+        this.testimonial = [];
+        this.slideIndex = 1;
         this.testimonials = _testimonialsService.getTestimonials();
     }
+    TestimonialsComponent.prototype.ngOnInit = function () {
+        // first testimonial on init
+        this.testimonial.push(this.testimonials[0]);
+        // first dot active
+        this.activeDot = 0;
+    };
+    TestimonialsComponent.prototype.currentSlide = function (i) {
+        this.showSlides(this.slideIndex = i);
+        if (this.activeDot === i) {
+            this.activeDot = 0;
+        }
+        else {
+            this.activeDot = i;
+        }
+    };
+    // Push the selection
+    TestimonialsComponent.prototype.showSlides = function (i) {
+        this.testimonial = [];
+        this.testimonial.push(this.testimonials[i]);
+    };
     TestimonialsComponent = __decorate([
         core_1.Component({
             selector: 'app-testim',

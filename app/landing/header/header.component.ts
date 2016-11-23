@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  showMenu: false;
+  constructor() {
+    }
 
+    getStyle() {
+      if(this.showMenu){
+        return 1;
+      } else {
+        return 0;
+      }
+    }
 }

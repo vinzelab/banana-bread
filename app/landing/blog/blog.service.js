@@ -9,9 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// Step 2. Use @Injectable() to declare the FriendService class as an Injectable
 var BlogService = (function () {
-    // 3C
     function BlogService() {
         this.articles = [
             { title: 'Cras mattis consectetur purus sit amet', date: 'DECEMBER 17, 2015 ', category: 'lifestyle', url: 'app/img/blog1.jpg', description: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper.Nullam id dolor id nibh elit... ' },
@@ -19,7 +17,6 @@ var BlogService = (function () {
             { title: 'Cras mattis consectetur purus sit amet', date: 'DECEMBER 17, 2015 ', category: 'lifestyle', url: 'app/img/blog3.jpg', description: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper.Nullam id dolor id nibh elit... ' }
         ];
     }
-    // 3D
     BlogService.prototype.getArticles = function () {
         return this.articles;
     };

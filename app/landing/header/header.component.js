@@ -8,18 +8,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var HeaderComponent = (function () {
     function HeaderComponent() {
     }
-    HeaderComponent = __decorate([
-        core_1.Component({
-            selector: 'app-header',
-            templateUrl: 'app/landing/header/header.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HeaderComponent);
+    HeaderComponent.prototype.getStyle = function () {
+        if (this.showMenu) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    };
     return HeaderComponent;
 }());
+HeaderComponent = __decorate([
+    core_1.Component({
+        selector: 'app-header',
+        templateUrl: 'app/landing/header/header.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], HeaderComponent);
 exports.HeaderComponent = HeaderComponent;
 //# sourceMappingURL=header.component.js.map

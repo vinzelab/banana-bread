@@ -9,18 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// Step 2. Use @Injectable() to declare the FriendService class as an Injectable
 var TestimonialsService = (function () {
-    // 3C
     function TestimonialsService() {
         this.testimonials = [
             { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers1.jpg' },
-            { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers2.jpg' },
-            { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers3.jpg' },
-            { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers4.jpg' }
+            { name: 'Joe zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers2.jpg' },
+            { name: 'Max zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.', url: 'app/img/customers3.jpg' },
+            { name: 'Léa zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenassed diam eget risus varius blandit sit amet non magna.', url: 'app/img/customers4.jpg' }
         ];
     }
-    // 3D
     TestimonialsService.prototype.getTestimonials = function () {
         return this.testimonials;
     };

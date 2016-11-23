@@ -19,7 +19,6 @@ var testimonials_component_1 = require('./landing/testimonials/testimonials.comp
 var blog_component_1 = require('./landing/blog/blog.component');
 var contact_component_1 = require('./landing/contact/contact.component');
 var instagram_component_1 = require('./landing/instagram/instagram.component');
-// import { HeaderComponent }   from './app/landing-page/header.component';
 var AppModule = (function () {
     function AppModule() {
     }

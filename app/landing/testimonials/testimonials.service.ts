@@ -1,33 +1,22 @@
 import { Injectable } from '@angular/core';
 
-// Step 2. Use @Injectable() to declare the FriendService class as an Injectable
 @Injectable()
 
-/**
-    Step 3A. - Create and export FriendsService  Class { }
-    3B: create friends object and declare it to be an Array of any values/
-    3C: Add friends object to the constructor function
-    3D: create getFriends() function to call all friends values.
-**/
-// 3A
-export class TestimonialsService {
+export class TestimonialsService{
 
-    // 3B
-    testimonials:Array<any>;
+  testimonials:Array<any>;
 
-    // 3C
-    constructor() {
-        this.testimonials = [
-    { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers1.jpg'},
-    { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers2.jpg'},
-    { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers3.jpg'},
-    { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers4.jpg'}
-        ];
-    }
+  constructor() {
+    this.testimonials = [
+      { name: 'Carole Dubois', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers1.jpg'},
+      { name: 'Joe zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers2.jpg'},
+      { name: 'Max zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.',url:'app/img/customers3.jpg'},
+      { name: 'Léa zerbib', comment: 'Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenassed diam eget risus varius blandit sit amet non magna.',url:'app/img/customers4.jpg'}
+    ];
+  }
 
-    // 3D
-    getTestimonials() {
-        return this.testimonials;
-    }
+  getTestimonials() {
+    return this.testimonials;
+  }
 
 }

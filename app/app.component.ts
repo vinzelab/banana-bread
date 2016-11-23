@@ -13,4 +13,6 @@ import { InstagramComponent } from './landing/instagram/instagram.component';
   templateUrl: 'app/app.component.html'
 })
 
-export class AppComponent { }
+export class AppComponent {
+
+}

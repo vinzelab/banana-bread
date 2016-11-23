@@ -4,16 +4,16 @@
     <h4>My latest ideas</h4>
   </div>
   <div *ngFor="let article of articles" class="col-xs-12 col-md-4">
-  <figure>
-    <img src="{{article.url}}" alt="{{article.name}}">
-    <figcaption class="text-center">
-      <div class="blog-title">
-      <h4>{{article.title}}</h4>
-      <h6>{{article.date}} in <span>{{article.category}}</span></h6>
-      </div>
-      <p>{{article.description}}</p>
-    </figcaption>
-  </figure>
+    <figure class="text-center">
+      <img src="{{article.url}}" alt="{{article.name}}">
+      <figcaption class="text-center">
+        <div class="blog-title">
+          <h4>{{article.title}}</h4>
+          <h6>{{article.date}} in <span>{{article.category}}</span></h6>
+        </div>
+        <p>{{article.description}}</p>
+      </figcaption>
+    </figure>
   </div>
 
 

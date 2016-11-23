@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var ContactComponent = (function () {
     function ContactComponent() {
     }
     ContactComponent.prototype.ngOnInit = function () {
+        //Initialisation gmap
         var maposition = new google.maps.LatLng(41.385385, 2.180871);
         var mapProp = {
             center: maposition,
@@ -26,6 +27,7 @@ var ContactComponent = (function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
+        // gmap custom style
         var styles = [
             {
                 stylers: [
@@ -52,26 +54,27 @@ var ContactComponent = (function () {
         var styledMap = new google.maps.StyledMapType(styles, { name: "Styled Map" });
         map.mapTypes.set('map_style', styledMap);
         map.setMapTypeId('map_style');
+        // gmap marker
         var marker = new google.maps.Marker({
             position: maposition,
-            title: "BANANA BREAD"
+            title: "BANANA BREAD",
+            visible: false
         });
-        // To add the marker to the map, call setMap();
+        // Add the marker to the map
         marker.setMap(map);
         var infowindow = new google.maps.InfoWindow({
-            content: "<div id='info-window'>banana bread</div>"
-        });
+            content: "<div id='info-window'>banana bread</div>" });
         infowindow.open(map, marker);
     };
     ContactComponent.prototype.onSubmit = function () { console.log("test"); };
+    ContactComponent = __decorate([
+        core_1.Component({
+            selector: 'app-contact',
+            templateUrl: 'app/landing/contact/contact.component.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ContactComponent);
     return ContactComponent;
 }());
-ContactComponent = __decorate([
-    core_1.Component({
-        selector: 'app-contact',
-        templateUrl: 'app/landing/contact/contact.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], ContactComponent);
 exports.ContactComponent = ContactComponent;
 //# sourceMappingURL=contact.component.js.map

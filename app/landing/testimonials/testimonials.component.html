@@ -4,39 +4,23 @@
     <h4>Our happy customers saying </h4>
   </div>
 
-    <div class="carousel slide container" data-ride="carousel" id="quote-carousel">
+  <div class="carousel slide container">
 
-      <!-- Bottom Carousel Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#quote-carousel" data-slide-to="1"></li>
-        <li data-target="#quote-carousel" data-slide-to="2"></li>
-      </ol>
+    <!-- Bottom Carousel Indicators -->
+    <ol class="carousel-indicators">
+      <li [ngClass]="{'active': activeDot === 0 }" (click)="currentSlide(0)"></li>
+      <li [ngClass]="{'active': activeDot === 1 }" (click)="currentSlide(1)"></li>
+      <li [ngClass]="{'active': activeDot === 2 }" (click)="currentSlide(2)"></li>
+      <li [ngClass]="{'active': activeDot === 3 }" (click)="currentSlide(3)"></li>
+    </ol>
+    
+    <div class="carousel-inner">
+      <div *ngFor="let select of testimonial" class="testimonial-wrapper item active">
+        <p class="testimonial">{{select.comment}}</p>
+        <img class="img-circle center-block" src="{{select.url}}" alt="banana bread photographer">
+        <h4>{{select.name}}</h4>
+      </div>
 
-      <div class="carousel-inner">
-
-        <div class="testimonial-wrapper item active">
-          <p class="testimonial">Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.</p>
-          <img class="img-circle center-block" src="app/img/customers1.jpg" alt="banana bread photographer">
-          <h4>Carole Dubois</h4>
-        </div>
-
-        <div class="testimonial-wrapper item">
-          <p class="testimonial">Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.</p>
-          <img class="img-circle center-block" src="app/img/customers2.jpg" alt="banana bread photographer">
-          <h4>Joe zerbib</h4>
-        </div>
-
-        <div class="testimonial-wrapper item">
-          <p class="testimonial">Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper . Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Maecenassed diam eget risus varius blandit sit amet non magna.</p>
-          <img class="img-circle center-block" src="app/img/customers3.jpg" alt="banana bread photographer">
-          <h4>Carole Dubois</h4>
-        </div>
-        <!-- <div *ngFor="let testimonial of testimonials;let i=index" class="testimonial-wrapper item">
-        <p class="testimonial">{{testimonial.comment}}</p>
-        <img class="img-circle" src="{{testimonial.url}}" alt="banana bread photographer">
-        <h4>{{testimonial.name}}</h4>
-      </div> -->
+    </div>
   </div>
-</div>
 </section>
