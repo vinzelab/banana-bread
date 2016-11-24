@@ -27,12 +27,7 @@ export class TestimonialsComponent implements OnInit{
 
   currentSlide(i){
     this.showSlides(this.slideIndex = i);
-    if (this.activeDot === i) {
-      this.activeDot = 0;
-    }
-    else {
-      this.activeDot = i;
-    }
+    this.activeDot = i;
   }
   // Push the selection
   showSlides(i) {

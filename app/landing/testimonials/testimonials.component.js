@@ -23,12 +23,7 @@ var TestimonialsComponent = (function () {
     };
     TestimonialsComponent.prototype.currentSlide = function (i) {
         this.showSlides(this.slideIndex = i);
-        if (this.activeDot === i) {
-            this.activeDot = 0;
-        }
-        else {
-            this.activeDot = i;
-        }
+        this.activeDot = i;
     };
     // Push the selection
     TestimonialsComponent.prototype.showSlides = function (i) {
