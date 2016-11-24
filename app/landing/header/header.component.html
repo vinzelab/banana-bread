@@ -1,11 +1,10 @@
 <header>
-  <div class="hamburger-menu" (click)="showMenu = !showMenu;">
+  <div class="hamburger-menu" (click)="showMenu = !showMenu;" [style.transform]="getRotate()">
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <nav class="responsive-nav" [style.opacity]="getStyle()">
-    <div class="menu-item-responsive"><a href="#"><img class="logo-header" src="app/img/logo-banana_bread.png" alt="logo banana bread" /></a></div>
+  <nav class="responsive-nav" [style.opacity]="getStyle()" [style.display]="getDisplay()">
     <div class="menu-item-responsive"><a href="#work">Work</a></div>
     <div class="menu-item-responsive"><a href="#collection">Collection</a></div>
     <div class="menu-item-responsive"><a href="#exposition">Exposition</a></div>

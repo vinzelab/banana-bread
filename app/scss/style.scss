@@ -74,6 +74,9 @@ body{
 h2{
   font-size: 5rem;
   font-weight: 700;
+  @media screen and (max-width: $break-large-phone) {
+    font-size: 3.5rem;
+  }
 }
 h4{
   font-size: 17px;
@@ -214,9 +217,7 @@ header {
   background: white;
   z-index: 1;
   transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: 2s ease-in,
   }
   position: absolute;
   left: 43%;
@@ -232,8 +233,10 @@ nav.responsive-nav {
   width: 100vw;
   height: 100vh;
   z-index: 99998;
-  background: rgba(69, 90, 100, 0.67);
-  opacity: 0 
+  background: rgba(69, 90, 100, 0.85);
+  opacity: 0;
+  display: none;
+  padding-top: 90px;
 }
 .menu-item-responsive{
   a{
@@ -313,6 +316,9 @@ nav.responsive-nav {
     width: 20px;
     top: 90%;
     left: 49%;
+    @media screen and (max-width: $break-large-phone) {
+      top:95%;
+    }
   }
   h4{
     color: $secondary-color;
@@ -361,6 +367,7 @@ nav.responsive-nav {
 #testimonials{
   background-color: $bg-color;
   padding-bottom: $padding-section;
+
 }
 .btn-primary{
   @include button($secondary-color);
@@ -417,7 +424,7 @@ span{
     font-size: 10rem;
     color: #dddddd;
     font-weight: 100;
-    top: 8%;
+    top: 7%;
     left: 6%;
   }
   &:after{
@@ -428,6 +435,9 @@ span{
     font-weight: 100;
     top: 20%;
     right: 13%;
+    @media screen and (max-width:$break-large-phone) {
+      top:60%;
+    }
   }
 }
 .nav-bullet{

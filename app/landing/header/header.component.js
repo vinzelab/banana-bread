@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var HeaderComponent = (function () {
     function HeaderComponent() {
     }
@@ -20,14 +20,30 @@ var HeaderComponent = (function () {
             return 0;
         }
     };
+    HeaderComponent.prototype.getDisplay = function () {
+        if (this.showMenu) {
+            return "block";
+        }
+        else {
+            return "none";
+        }
+    };
+    HeaderComponent.prototype.getRotate = function () {
+        if (this.showMenu) {
+            return "rotate(-30deg)";
+        }
+        else {
+            return "none";
+        }
+    };
+    HeaderComponent = __decorate([
+        core_1.Component({
+            selector: 'app-header',
+            templateUrl: 'app/landing/header/header.component.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HeaderComponent);
     return HeaderComponent;
 }());
-HeaderComponent = __decorate([
-    core_1.Component({
-        selector: 'app-header',
-        templateUrl: 'app/landing/header/header.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], HeaderComponent);
 exports.HeaderComponent = HeaderComponent;
 //# sourceMappingURL=header.component.js.map

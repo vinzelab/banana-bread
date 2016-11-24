@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
   showMenu: false;
+
   constructor() {
     }
 
@@ -15,6 +16,20 @@ export class HeaderComponent {
         return 1;
       } else {
         return 0;
+      }
+    }
+    getDisplay() {
+      if(this.showMenu){
+        return "block";
+      } else {
+        return "none";
+      }
+    }
+    getRotate(){
+      if(this.showMenu){
+        return "rotate(-30deg)";
+      } else {
+        return "none";
       }
     }
 }

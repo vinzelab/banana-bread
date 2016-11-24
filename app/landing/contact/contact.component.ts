@@ -72,5 +72,8 @@ export class ContactComponent implements OnInit{
         infowindow.open(map, marker);
 
       }
-      onSubmit() { console.log("test") }
+      // validation form
+      onSubmit() { console.log("message envoyé")
+
+    }
     }

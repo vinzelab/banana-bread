@@ -10,6 +10,9 @@ body {
 h2 {
   font-size: 5rem;
   font-weight: 700; }
+  @media screen and (max-width: 414px) {
+    h2 {
+      font-size: 3.5rem; } }
 
 h4 {
   font-size: 17px;
@@ -160,7 +163,7 @@ header {
     background: white;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+    transition: 2s ease-in; }
   @media screen and (max-width: 414px) {
     .hamburger-menu {
       display: block; } }
@@ -170,8 +173,10 @@ nav.responsive-nav {
   width: 100vw;
   height: 100vh;
   z-index: 99998;
-  background: rgba(69, 90, 100, 0.67);
-  opacity: 0; }
+  background: rgba(69, 90, 100, 0.85);
+  opacity: 0;
+  display: none;
+  padding-top: 90px; }
 
 .menu-item-responsive {
   text-align: center;
@@ -243,6 +248,9 @@ nav.responsive-nav {
     width: 20px;
     top: 90%;
     left: 49%; }
+    @media screen and (max-width: 414px) {
+      .title-wrapper:before {
+        top: 95%; } }
   .title-wrapper h4 {
     color: #999999;
     text-align: center;
@@ -387,7 +395,7 @@ span {
   font-size: 10rem;
   color: #dddddd;
   font-weight: 100;
-  top: 8%;
+  top: 7%;
   left: 6%; }
 
 .testimonial:after {
@@ -398,6 +406,9 @@ span {
   font-weight: 100;
   top: 20%;
   right: 13%; }
+  @media screen and (max-width: 414px) {
+    .testimonial:after {
+      top: 60%; } }
 
 .nav-bullet {
   margin: 20px auto; }
