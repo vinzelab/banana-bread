@@ -73,7 +73,7 @@ export class ContactComponent implements OnInit{
 
       }
       // validation form
-      onSubmit() { console.log("message envoyé")
-
+      send(message) {
+        console.log(message);
     }
     }

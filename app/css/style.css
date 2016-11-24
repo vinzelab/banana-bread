@@ -451,3 +451,8 @@ span {
     height: 10px;
     background-color: #999999;
     margin: 3px; }
+
+.loader {
+  position: absolute;
+  left: 40%;
+  top: 30%; }

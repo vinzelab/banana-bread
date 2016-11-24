@@ -7,7 +7,7 @@
     Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     <div *ngFor="let work of works" class="col-xs-12 col-sm-12 col-md-6">
       <figure class="text-center">
-        <img src="{{work.url}}" alt="{{work.name}}">
+        <img [src]="work.url" alt="testimonial banana bread">
         <figcaption>
           <h4>{{work.name}}</h4>
           <h5>{{work.category}}</h5>

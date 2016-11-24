@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+ import { Component,OnInit } from '@angular/core';
 
 import {TestimonialsService} from './testimonials.service';
 
@@ -8,7 +8,7 @@ import {TestimonialsService} from './testimonials.service';
   templateUrl: 'app/landing/testimonials/testimonials.component.html'
 })
 
-export class TestimonialsComponent {
+export class TestimonialsComponent implements OnInit{
   public testimonials;
   public testimonial:Array<any>=[];
   public slideIndex:number=1;

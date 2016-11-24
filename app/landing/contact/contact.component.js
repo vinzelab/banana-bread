@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var ContactComponent = (function () {
     function ContactComponent() {
     }
@@ -63,22 +63,21 @@ var ContactComponent = (function () {
         // Add the marker to the map
         marker.setMap(map);
         var infowindow = new google.maps.InfoWindow({
-            content: "<div id='info-window'>banana bread</div>"
-        });
+            content: "<div id='info-window'>banana bread</div>" });
         infowindow.open(map, marker);
     };
     // validation form
-    ContactComponent.prototype.onSubmit = function () {
-        console.log("message envoyé");
+    ContactComponent.prototype.send = function (message) {
+        console.log(message);
     };
+    ContactComponent = __decorate([
+        core_1.Component({
+            selector: 'app-contact',
+            templateUrl: 'app/landing/contact/contact.component.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ContactComponent);
     return ContactComponent;
 }());
-ContactComponent = __decorate([
-    core_1.Component({
-        selector: 'app-contact',
-        templateUrl: 'app/landing/contact/contact.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], ContactComponent);
 exports.ContactComponent = ContactComponent;
 //# sourceMappingURL=contact.component.js.map
