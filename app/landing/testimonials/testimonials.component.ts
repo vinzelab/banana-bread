@@ -10,8 +10,8 @@ import {TestimonialsService} from './testimonials.service';
 
 export class TestimonialsComponent implements OnInit{
   public testimonials;
-  public testimonial:Array<any>=[];
-  public slideIndex:number=1;
+  testimonial:Array<any>=[];
+  slideIndex:number;
   activeDot:number;
 
   constructor(_testimonialsService: TestimonialsService) {
